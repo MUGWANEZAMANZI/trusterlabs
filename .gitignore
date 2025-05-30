@@ -1,0 +1,68 @@
+# -------------------------------------------------------------------
+# Global Ignores (apply to the root of the repository)
+# -------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.pem
+.phpactor.json
+.phpunit.result.cache
+/.fleet/
+/.idea/
+/.nova/
+/.phpunit.cache/
+/.vscode/
+/.zed/
+/auth.json
+Homestead.json
+Homestead.yaml
+.vercel/ # If your .vercel directory is at the root of the monorepo
+
+# -------------------------------------------------------------------
+# Frontend (Next.js) Specific Ignores
+# -------------------------------------------------------------------
+frontend/node_modules/
+frontend/.pnp/
+frontend/.pnp.*
+frontend/.yarn/
+!frontend/.yarn/patches
+!frontend/.yarn/plugins
+!frontend/.yarn/releases
+!frontend/.yarn/versions
+frontend/coverage/ # For frontend test coverage reports
+frontend/.next/
+frontend/out/
+frontend/build/ # If Next.js outputs to a 'build' folder at its root
+frontend/.env.local
+frontend/.env.development
+frontend/.env.production
+frontend/.env.test
+frontend/next-env.d.ts
+frontend/*.tsbuildinfo
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.pnpm-debug.log*
+frontend/public/videos/*.mp4 # If your Next.js public folder contains videos
+
+# -------------------------------------------------------------------
+# Backend (Laravel) Specific Ignores
+# -------------------------------------------------------------------
+backend/vendor/
+backend/node_modules/ # If your Laravel project has its own node_modules (e.g., for dev tools like Vite/Mix)
+backend/storage/*.key
+backend/storage/pail
+backend/public/build/ # For Laravel Vite/Mix build output
+backend/public/hot
+backend/public/storage/ # The symlink for storage/app/public
+backend/.env
+backend/.env.backup
+backend/.env.production
+backend/npm-debug.log
+backend/yarn-error.log
+backend/coverage/ # For PHPUnit coverage reports
+backend/public/videos/*.mp4 # If your Laravel public folder contains videos
+
+# -------------------------------------------------------------------
+# General log files (if generated at the root or within specific folders)
+# -------------------------------------------------------------------
+*.log # Catches any .log files at the root of the project (e.g., laravel.log if not in backend/storage/logs)
