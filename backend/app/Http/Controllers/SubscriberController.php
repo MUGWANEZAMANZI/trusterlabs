@@ -26,7 +26,7 @@ class SubscriberController extends Controller
         ]);
         
         return response()->json([
-            'message' => 'You have successfully subscribed to our newsletter.',
+            'message' => 'You have successfully subscribed to our newsletters.',
             'subscriber' => $subscriber
         ],200);
         } catch (\Exception $e) {
